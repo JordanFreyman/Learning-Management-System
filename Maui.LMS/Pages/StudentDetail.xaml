@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui.LMS.Pages.StudentDetail"
+             Title="StudentDetail">
+    <VerticalStackLayout>
+        <Label
+            Text="Name"
+            VerticalOptions="Center"
+            HorizontalOptions="Center" />
+        <Entry Text="{Binding Path=Name, Mode=TwoWay}"/>
+        <StackLayout    
+            RadioButtonGroup.GroupName="Classifications"
+            RadioButtonGroup.SelectedValue="{Binding ClassificationStr}">
+            <RadioButton Content="Freshman"
+              Value="1"/>
+            <RadioButton Content="Sophomore"
+                Value="2"/>
+            <RadioButton Content="Junior"
+                Value="3"/>
+            <RadioButton Content="Senior"
+                Value="4"/>
+  
+            <Button
+     Text="Done"
+     Clicked="DoneClick"
+     />
+        </StackLayout>
+           
+    </VerticalStackLayout>
+</ContentPage>
